@@ -39,8 +39,10 @@ public class FenConnexion extends JFrame {
 					if(ControleConnexion.getControleConnexion().getEtatControleConnexion())
 					{				
 						FenConnexion.this.dispose() ;
-						FenParticipant LaFenParticipant = new FenParticipant() ;
-						LaFenParticipant.setVisible(true) ;
+						FenMenu LaFenMenu = new FenMenu();
+						LaFenMenu.setVisible(true);
+						/*FenParticipant LaFenParticipant = new FenParticipant() ;
+						LaFenParticipant.setVisible(true) ; */
 					}
 				}
 			}});

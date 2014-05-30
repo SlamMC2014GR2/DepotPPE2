@@ -20,6 +20,8 @@ import java.text.SimpleDateFormat;
 //permet d établir le lien avec la classe GestionDemandes
 import controle.GestionDemandes;
 import entite.*;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 public class FenParticipant extends JFrame {
 	private static final long serialVersionUID = 1L;
 	// propriété pour établir le lien avec la classe GestionDemandes
@@ -250,6 +252,17 @@ public class FenParticipant extends JFrame {
 			regroupeboutons();
 			btn_embaucher.setEnabled(false);
 			Btn_Rechercher.setEnabled(false);
+			
+			JButton btnRetourMenu = new JButton("Retour Menu");
+			btnRetourMenu.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					FenMenu LaFenMenu = new FenMenu();
+					LaFenMenu.setVisible(true);
+					FenParticipant.this.dispose();
+				}
+			});
+			btnRetourMenu.setBounds(568, 600, 110, 40);
+			jContentPrincipal.add(btnRetourMenu);
 			btn_ok.setVisible(true);
 			btn_annuler.setVisible(true);
 			jContentInscriptionIntervenant.setVisible(false);
@@ -989,6 +1002,4 @@ public class FenParticipant extends JFrame {
 		}
 		return cbx_qualite_B;
 	}
-
-
 }  //  @jve:decl-index=0:visual-constraint="16,5"

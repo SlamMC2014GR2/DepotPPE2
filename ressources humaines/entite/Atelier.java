@@ -28,6 +28,10 @@ public class Atelier
 		return maxplace;
 	}
 	
+	public String req_InsertAtelier(){
+		return "EXECUTE AjoutAtelier "+this.getLibelleatelier()+", "+this.getMaxplace();
+	}
+	
 
 }
 
